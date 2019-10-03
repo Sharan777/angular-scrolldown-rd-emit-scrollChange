@@ -1,0 +1,15 @@
+
+<p>
+  Start editing to see some magic happen :)
+</p>
+
+<perfect-scrollbar style="max-width: 600px; max-height: 200px;" [config]="config"  (psYReachEnd)="onReachEnd($event,'loadMore')"
+(psScrollY)="test()">
+
+
+  <div id="container" >
+  <p *ngFor="let item of items">{{item}}</p>
+<button id="loadMore" class="loadMorePS"
+(click)="loadMoreEvent()"></button>
+</div>
+</perfect-scrollbar>
